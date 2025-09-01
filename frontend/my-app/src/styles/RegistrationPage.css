@@ -1,0 +1,189 @@
+  /* src/styles/RegistrationPage.css */
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #16213e;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.registration-card {
+  background-color: #0f3460;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 650px;
+  padding: 40px;
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.registration-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.registration-title {
+  text-align: center;
+  color: #e94560;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  padding: 14px;
+  background-color: #16213e;
+  border: 2px solid #2d4059;
+  border-radius: 8px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+  outline: none;
+  border-color: #e94560;
+  box-shadow: 0 0 0 3px rgba(233, 69, 96, 0.2);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.checkbox-label {
+  display: inline-flex; /* Changed to inline-flex for better inline behavior */
+  align-items: center; /* Vertically centers checkbox and text */
+  background-color: rgba(22, 33, 62, 0.7);
+  padding: 8px 12px; /* Slightly reduced padding */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #2d4059;
+  font-size: 0.9rem; /* Slightly smaller than section title */
+  font-weight: 400; 
+  white-space: nowrap;
+  margin: 2px; /* Small margin between adjacent checkboxes */
+  line-height: 1; /* Ensures consistent line height */
+}
+
+.checkbox-label:hover {
+  background-color: rgba(22, 33, 62, 0.9);
+  transform: translateY(-2px);
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: #e94560;
+  width: 14px; /* Smaller checkbox */
+  height: 14px;
+  margin-right: 8px; /* Increased space between checkbox and text */
+  flex-shrink: 0;
+  position: relative;
+  top: 0; /* Removes any default vertical offset */
+}
+
+.checkbox-container {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 5px; /* Space for scrollbar if needed */
+}
+
+/* Optional: Add a subtle scrollbar for mobile/overflow */
+.checkbox-container::-webkit-scrollbar {
+  height: 5px;
+}
+
+.checkbox-container::-webkit-scrollbar-thumb {
+  background-color: #e94560;
+  border-radius: 10px;
+}
+
+.registration-button {
+  background-color: #e94560;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.registration-button:hover {
+  background-color: #ff6b88;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(233, 69, 96, 0.3);
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+/* Section titles for checkbox groups */
+.section-title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #e94560;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .registration-card {
+      padding: 30px;
+  }
+  
+  .checkbox-group {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-card {
+      padding: 25px;
+  }
+  
+  .registration-title {
+      font-size: 2rem;
+  }
+  
+  .checkbox-group {
+      grid-template-columns: 1fr;
+  }
+}
