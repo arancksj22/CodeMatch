@@ -1572,7 +1572,7 @@ app.delete('/api/projects/:projectId/collaborators/:userId', (req, res) => {
                     return res.status(404).json({ error: 'Collaborator not found for this project' });
                 }
                 
-                res.json({ message: 'Collaborator removed successfully' });
+                res.json({ message: 'Collaborator removedsuccessfully' });
             }
         );
     });
